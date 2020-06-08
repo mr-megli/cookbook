@@ -1,0 +1,7 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<input #inputBox><button (click)="search(inputBox.value)">Search</button>
+
+<h2>Results</h2>
+<ul *ngIf="(result$ | async) as result">
+  <li *ngFor="let item of result">{{item.title}} ({{item.date}})</li>
+</ul>
